@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48c2099d-1913-43e7-b632-1d266313c061" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ejercicio1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ejercicio2.java" afterDir="false" />
+    <list default="true" id="48c2099d-1913-43e7-b632-1d266313c061" name="Changes" comment="Ejercicio 1, 2 y 3 realizados">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ejercicio4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ejercicio4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +61,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676299157526</updated>
-      <workItem from="1676299159475" duration="339000" />
+      <workItem from="1676299159475" duration="724000" />
     </task>
+    <task id="LOCAL-00001" summary="Ejercicio 1, 2 y 3 realizados">
+      <created>1676299766415</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676299766416</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,5 +86,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ejercicio 1, 2 y 3 realizados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 1, 2 y 3 realizados" />
   </component>
 </project>
