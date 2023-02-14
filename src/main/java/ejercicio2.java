@@ -11,6 +11,7 @@ public class ejercicio2 {
         System.out.println("Introduzca la temperatura: ");
         Scanner sn =  new Scanner(System.in);
         int temperatura = sn.nextInt();
+
         if (temperatura < 2) {
             System.out.println("Riesgo de hielo");
         }
@@ -23,7 +24,7 @@ public class ejercicio2 {
         }
 
         else if (temperatura >= 30) {
-            System.out.println("Hace calor");
+            System.out.println("Demasiado calor");
         }
     }
 
