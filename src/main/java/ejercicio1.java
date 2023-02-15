@@ -17,7 +17,7 @@ public class ejercicio1 {
         if (temperatura < 2) {
             System.out.println("Riesgo de hielo");
         }
-        else{
+        else if (temperatura >= 2){
             System.out.println("No hay riesgo de hielo");
         }
     }
