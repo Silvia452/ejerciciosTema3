@@ -2,77 +2,74 @@ import java.util.Scanner;
 
 public class ejercicio5 {
 
-    public static Scanner sn = new Scanner(System.in);
+    public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         nomina();
 
     }
 
-    public static void nomina(){
+    public static void nomina() {
 
-        System.out.println("¿Apellido de la persona?");
-        String apellido = sn.nextLine();
-        System.out.println(apellido);
 
-        System.out.println("¿Nombre de la persona?");
-        String nombre = sn.nextLine();
+        System.out.print("¿Apellido de la persona? ");
+        String apellido = sc.nextLine();
 
-        System.out.println("¿Puesto?\n"
-                + "1.Agente de servicio\n"
-                + "2.Empleado de oficina\n"
-                + "3. Directivo\n");
+        System.out.print("¿Nombre de la persona? ");
+        String nombre = sc.nextLine();
 
-        int option = sn.nextInt();
-        switch (option){
+        System.out.println("Puesto?");
+        System.out.println("1 - Agente de servicio");
+        System.out.println("2 - Empleado de oficina");
+        System.out.println("3 - Directivo");
+        int puesto = sc.nextInt();
+
+        System.out.print("Número de horas trabajadas? ");
+        int horas = sc.nextInt();
+
+        System.out.print("Tarifa horaria? ");
+        double tarifa = sc.nextDouble();
+
+        System.out.print("Número de hijos? ");
+        int hijos = sc.nextInt();
+
+        System.out.println("Nómina de " + nombre + " " + apellido);
+        System.out.print("Estado: ");
+        switch (puesto) {
             case 1:
+                System.out.println("Agente de servicio");
                 break;
             case 2:
+                System.out.println("Empleado de oficina");
                 break;
             case 3:
+                System.out.println("Directivo");
+                break;
+            default:
+                System.out.println("Desconocido");
                 break;
         }
 
-        System.out.println("Número de horas trabajadas: ");
-        int horastrabajadas = sn.nextInt();
-        System.out.println("¿Tarifa horaria? ");
-        int tarifahoraria = sn.nextInt();
+        double salarioBruto = 0;
+        int horasNormales = Math.min(horas, 169);
+        salarioBruto += horasNormales * tarifa;
+        int horasExtra1 = Math.min(Math.max(horas - 169, 0), 11);
+        salarioBruto += horasExtra1 * tarifa * 1.5;
+        int horasExtra2 = Math.max(horas - 180, 0);
+        salarioBruto += horasExtra2 * tarifa * 1.6;
+        System.out.printf("Salario bruto: %.2f € (%d horas sin incremento, %d horas con incremento del 50%%, %d horas con incremento del 60%%)%n",
+                salarioBruto, horasNormales, horasExtra1, horasExtra2);
 
-        if (horastrabajadas<169){
-            System.out.println("El salario bruto es de: " + (tarifahoraria) + "€");
-        }
-        else if (horastrabajadas>=169 && horastrabajadas<=180) {
-            System.out.println("El salario bruto es de: " + (tarifahoraria * 0.50) + "€");
-
-        }
-        else if(horastrabajadas>180){
-            System.out.println("El salario bruto es de: " + (tarifahoraria * 0.60) + "€");
-        }
-
-        System.out.println("¿Número de hijos?");
-        int numhijos = sn.nextInt();
-
-        System.out.println("Nómina de " + nombre + " " + apellido + ":\n"
-        + "Estado:" + option + "\n"
-        + "Salario bruto: " + horastrabajadas + "€\n");
-        
-
-        if (numhijos == 1){
-            int primatotal = 20;
-            System.out.println("Prima familiar: " + primatotal + "€");
-        }
-        else if(numhijos == 2){
-            int primatotal = 50;
-            System.out.println("Prima familiar: " + primatotal + "€");
-        }
-
-        else if(numhijos>2){
-            int primatotal = 70 + (numhijos-2)*20;
-            System.out.println("Prima familiar: " + primatotal + "€");
-        }
-
-
-
-
+        double deducciones = salarioBruto * 0.0349 + salarioBruto * 0.0615 + salarioBruto * 0.0095 + salarioBruto * 0.0844
+                + salarioBruto * 0.0305 + salarioBruto * 0.0381 + salarioBruto * 0.0102;
+        System.out.printf("Cálculo de deducciones:%n");
+        System.out.printf("Contribución para el pago de la deuda social y contingencias comunes imponible: %.2f €%n", salarioBruto * 0.0349);
+        System.out.printf("Contribución de contingencias comunes no imponible: %.2f €%n", salarioBruto * 0.0615);
+        System.out.printf("Seguro médico: %.2f €%n", salarioBruto * 0.0095);
+        System.out.printf("Fondo de pensiones: %.2f €%n", salarioBruto * 0.0844);
+        System.out.printf("Seguro de desempleo: %.2f €%n", salarioBruto * 0.0305);
+        System.out.printf("Pensión complementaria (Entidad privada): %.2f €%n", salarioBruto * 0.0381);
+        System.out.printf("Contribución de jubilación anticipada: %.2f €%n", salarioBruto * 0.0102);
     }
 }
+
