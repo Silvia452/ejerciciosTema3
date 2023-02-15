@@ -7,6 +7,7 @@ public class ejercicio4 {
 
     }
 
+
     public static void coccionCarne(){
         Scanner sc = new Scanner(System.in);
 
