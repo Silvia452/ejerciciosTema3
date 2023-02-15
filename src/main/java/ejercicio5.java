@@ -12,25 +12,26 @@ public class ejercicio5 {
     public static void nomina() {
 
 
-        System.out.print("¿Apellido de la persona? ");
+        System.out.println("¿Apellido de la persona? ");
         String apellido = sc.nextLine();
 
-        System.out.print("¿Nombre de la persona? ");
+        System.out.println("¿Nombre de la persona? ");
         String nombre = sc.nextLine();
 
-        System.out.println("Puesto?");
-        System.out.println("1 - Agente de servicio");
-        System.out.println("2 - Empleado de oficina");
-        System.out.println("3 - Directivo");
+        System.out.println("¿Puesto?\n"
+                + "1 - Agente de servicio\n"
+                + "2 - Empleado de oficina\n"
+                + "3 - Directivo");
         int puesto = sc.nextInt();
 
-        System.out.print("Número de horas trabajadas? ");
+
+        System.out.print("¿Número de horas trabajadas?\n ");
         int horas = sc.nextInt();
 
-        System.out.print("Tarifa horaria? ");
+        System.out.print("¿Tarifa horaria?\n ");
         double tarifa = sc.nextDouble();
 
-        System.out.print("Número de hijos? ");
+        System.out.print("¿Número de hijos?\n ");
         int hijos = sc.nextInt();
 
         System.out.println("Nómina de " + nombre + " " + apellido);

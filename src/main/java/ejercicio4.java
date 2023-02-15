@@ -23,11 +23,11 @@ public class ejercicio4 {
         int tiempoCoccion;
         if (tipoCarne.equals("vacuno")) {
             if (modoCoccion.equals("casi cruda")) {
-                tiempoCoccion = 10;
+                tiempoCoccion = 10 ;
             } else if (modoCoccion.equals("al punto")) {
-                tiempoCoccion = 17;
+                tiempoCoccion = 17 ;
             } else if (modoCoccion.equals("bien hecha")) {
-                tiempoCoccion = 25;
+                tiempoCoccion = 25 ;
             } else {
                 System.out.println("Modo de cocción inválido");
                 return;
@@ -48,7 +48,7 @@ public class ejercicio4 {
             return;
         }
 
-        int tiempoTotal = tiempoCoccion * peso / 1000 * 60;
+        int tiempoTotal = tiempoCoccion * peso * 60 / 1000;
         System.out.println("El tiempo de cocción es de " + tiempoTotal + " segundos");
     }
 
