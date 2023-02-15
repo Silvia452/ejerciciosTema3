@@ -8,39 +8,47 @@ public class ejercicio4 {
     }
 
     public static void coccionCarne(){
-        System.out.println("Introduzca el tipo de carne: \nvacuno o cordero ");
-        Scanner sn =  new Scanner(System.in);
-        String carne = sn.nextLine();
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduzca el modo de cocción que desee cocinar la carne: ");
-        String coccion = sn.nextLine();
+        System.out.println("Ingrese el tipo de carne (vacuno/cordero): ");
+        String tipoCarne = sc.nextLine();
 
-        System.out.println("Introduzca el peso de la carne: ");
-        int peso = sn.nextInt();
+        System.out.println("Ingrese el modo de cocción (casi cruda/al punto/bien hecha): ");
+        String modoCoccion = sc.nextLine();
 
-        if (carne == "vacuno") {
-            if (coccion == "crudo") {
-                System.out.println("El tiempo de cocción es de: " + (10 * peso) + " segundos");
+        System.out.println("Ingrese el peso en gramos: ");
+        int peso = sc.nextInt();
+
+        int tiempoCoccion;
+        if (tipoCarne.equals("vacuno")) {
+            if (modoCoccion.equals("casi cruda")) {
+                tiempoCoccion = 10;
+            } else if (modoCoccion.equals("al punto")) {
+                tiempoCoccion = 17;
+            } else if (modoCoccion.equals("bien hecha")) {
+                tiempoCoccion = 25;
+            } else {
+                System.out.println("Modo de cocción inválido");
+                return;
             }
-            else if (coccion == "punto") {
-                System.out.println("El tiempo de cocción es de: " + (17 * peso) + " segundos");
+        } else if (tipoCarne.equals("cordero")) {
+            if (modoCoccion.equals("casi cruda")) {
+                tiempoCoccion = 15;
+            } else if (modoCoccion.equals("al punto")) {
+                tiempoCoccion = 25;
+            } else if (modoCoccion.equals("bien hecha")) {
+                tiempoCoccion = 40;
+            } else {
+                System.out.println("Modo de cocción inválido");
+                return;
             }
-            else if (coccion == "bien") {
-                System.out.println("El tiempo de cocción es de: " + (25 * peso) + " segundos");
-            }
+        } else {
+            System.out.println("Tipo de carne inválido");
+            return;
         }
-        else if (carne == "cordero") {
-            if (coccion == "crudo") {
-                System.out.println("El tiempo de cocción es de: " + (15 * peso) + " segundos");
-            }
-            else if (coccion == "punto") {
-                System.out.println("El tiempo de cocción es de: " + (25 * peso) + " segundos");
-            }
-            else if (coccion == "bien") {
-                System.out.println("El tiempo de cocción es de: " + (40 * peso) + " segundos");
-            }
-        }
 
+        int tiempoTotal = tiempoCoccion * peso / 1000 * 60;
+        System.out.println("El tiempo de cocción es de " + tiempoTotal + " segundos");
     }
 
 }
