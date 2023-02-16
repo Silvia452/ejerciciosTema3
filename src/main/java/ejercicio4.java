@@ -47,12 +47,14 @@ public class ejercicio4 {
                 System.out.println("Modo de cocción inválido");
                 return;
             }
+            int tiempoTotal = tiempoCoccion * peso * 60 / 400;
+            System.out.println("El tiempo de cocción es de " + tiempoTotal + " segundos");
+
         } else {
             System.out.println("Tipo de carne inválido");
             return;
         }
-        int tiempoTotal = tiempoCoccion * peso * 60 / 400;
-        System.out.println("El tiempo de cocción es de " + tiempoTotal + " segundos");
+
 
 
     }
