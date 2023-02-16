@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48c2099d-1913-43e7-b632-1d266313c061" name="Changes" comment="Cambios, todos funcionan">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ejercicio4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ejercicio4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ejercicio5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ejercicio5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <workItem from="1676455749725" duration="2512000" />
       <workItem from="1676472159371" duration="114000" />
       <workItem from="1676478971327" duration="1363000" />
-      <workItem from="1676542448872" duration="982000" />
+      <workItem from="1676542448872" duration="1783000" />
     </task>
     <task id="LOCAL-00001" summary="Ejercicio 1, 2 y 3 realizados">
       <created>1676299766415</created>
@@ -149,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676543399800</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Cambios, todos funcionan">
+      <created>1676543578030</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676543578030</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

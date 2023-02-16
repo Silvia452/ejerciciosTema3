@@ -34,6 +34,17 @@ public class ejercicio5 {
 
         System.out.print("¿Número de hijos?\n ");
         int hijos = sc.nextInt();
+        int primaHijos = 0;
+
+        if (hijos ==1){
+            primaHijos = 20;
+        }
+        else if (hijos ==2){
+            primaHijos = 50;
+        }
+        else if (hijos>2){
+            primaHijos = 70 + (hijos-2)*20;
+        }
 
         System.out.println("Nómina de " + nombre + " " + apellido);
         System.out.print("Estado: ");
@@ -72,6 +83,9 @@ public class ejercicio5 {
         System.out.printf("Seguro de desempleo: %.2f €%n", salarioBruto * 0.0305);
         System.out.printf("Pensión complementaria (Entidad privada): %.2f €%n", salarioBruto * 0.0381);
         System.out.printf("Contribución de jubilación anticipada: %.2f €%n", salarioBruto * 0.0102);
+        System.out.println("Deducciones totales de los empleados: " + deducciones + " €");
+        System.out.println("Salario neto: " + (salarioBruto - deducciones) + " €");
+        System.out.println("Prima familiar: " + primaHijos + " €");
     }
 }
 
