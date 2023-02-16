@@ -1,4 +1,4 @@
-//Escriba un algoritmo que muestre "riesgo de hielo", si la temperatura introducida es inferior a 2°C
+//EJERCICIO 1
 
 import java.util.Scanner;
 

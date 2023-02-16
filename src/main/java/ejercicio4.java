@@ -1,3 +1,4 @@
+//EJERCICIO 4
 import java.util.Scanner;
 
 public class ejercicio4 {
@@ -34,6 +35,7 @@ public class ejercicio4 {
             }
             int tiempoTotal = tiempoCoccion * peso * 60 / 500;
             System.out.println("El tiempo de cocción es de " + tiempoTotal + " segundos");
+
         } else if (tipoCarne.equals("cordero")) {
             if (modoCoccion.equals("casi cruda")) {
                 tiempoCoccion = 15;
