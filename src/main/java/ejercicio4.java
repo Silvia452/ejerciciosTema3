@@ -32,6 +32,8 @@ public class ejercicio4 {
                 System.out.println("Modo de cocción inválido");
                 return;
             }
+            int tiempoTotal = tiempoCoccion * peso * 60 / 500;
+            System.out.println("El tiempo de cocción es de " + tiempoTotal + " segundos");
         } else if (tipoCarne.equals("cordero")) {
             if (modoCoccion.equals("casi cruda")) {
                 tiempoCoccion = 15;
@@ -47,9 +49,10 @@ public class ejercicio4 {
             System.out.println("Tipo de carne inválido");
             return;
         }
-
-        int tiempoTotal = tiempoCoccion * peso * 60 / 1000;
+        int tiempoTotal = tiempoCoccion * peso * 60 / 400;
         System.out.println("El tiempo de cocción es de " + tiempoTotal + " segundos");
+
+
     }
 
 }
